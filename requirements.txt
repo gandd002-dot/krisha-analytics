@@ -1,0 +1,11 @@
+streamlit
+psycopg2-binary
+pandas
+numpy
+requests
+beautifulsoup4
+torch
+transformers
+xgboost
+scikit-learn
+python-dotenv
