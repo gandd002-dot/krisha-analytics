@@ -4,17 +4,13 @@ import pandas as pd
 import numpy as np
 import json
 import re
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 DB_CONFIG = {
-    "host":     os.getenv("DB_HOST"),
-    "port":     int(os.getenv("DB_PORT")),
-    "dbname":   os.getenv("DB_NAME"),
-    "user":     os.getenv("DB_USER"),
-    "password": os.getenv("DB_PASSWORD")
+    "host":     st.secrets["DB_HOST"],
+    "port":     int(st.secrets["DB_PORT"]),
+    "dbname":   st.secrets["DB_NAME"],
+    "user":     st.secrets["DB_USER"],
+    "password": st.secrets["DB_PASSWORD"]
 }
 
 st.set_page_config(page_title="Krisha Analytics", page_icon="🏠", layout="wide")
@@ -167,7 +163,7 @@ with st.sidebar:
 
     st.divider()
 
-    luxury_mode = st.toggle("💎 Бюджет не ограничен (люкс режим)")
+    luxury_mode = st.toggle("Бюджет не ограничен")
     if luxury_mode:
         st.caption("Сортировка идёт по качеству ремонта, а не по скидке.")
 

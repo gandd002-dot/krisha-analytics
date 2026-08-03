@@ -18,3 +18,5 @@ __pycache__/
 
 # Логи
 *.log
+
+.streamlit/secrets.toml
