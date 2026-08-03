@@ -1,5 +1,7 @@
 # 🏠 Krisha Analytics
 
+**[Открыть живое приложение](https://krisha-analytics-lxtmguvfkmjapzdyn4uemj.streamlit.app/)**
+
 AI-инструмент для поиска недооценённых квартир на рынке аренды/продажи недвижимости Казахстана (krisha.kz).
 
 ## Что делает проект
