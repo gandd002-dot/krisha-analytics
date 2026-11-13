@@ -1,0 +1,55 @@
+/* App-owned classes and Streamlit's documented st-key-* container classes. */
+:root { --mint: #91e8c2; --line: #354247; --muted: #a4b4b8; }
+.brand {font-size:25px;font-weight:750;letter-spacing:-1px;margin:8px 0 6px;}
+.brand span {color:var(--mint)}
+.brand-icon {display:inline-block;width:20px;height:20px;border-left:4px solid var(--mint);border-top:4px solid var(--mint);transform:rotate(45deg);margin:0 13px 0 5px;vertical-align:-2px;border-radius:2px;}
+.intro {text-align:center;padding:22px 0 25px;}
+.eyebrow {font-size:10px;letter-spacing:2.5px;font-weight:700;color:var(--mint);}
+.intro h1 {font-size:clamp(26px,3vw,40px);font-weight:750;letter-spacing:-1.3px;padding:12px 0 6px;line-height:1.2;}
+.intro .accent {color:var(--mint)}
+.intro p {font-size:14px;color:var(--muted);margin:5px 0;}
+.st-key-topbar {border-bottom:1px solid var(--line);padding-bottom:10px;}
+.st-key-search_panel {background:#1c2529;border:1px solid var(--line);border-radius:14px;padding:18px 20px 5px;}
+.st-key-preview_header {margin-top:12px;}
+.section-title {font-size:15px;font-weight:600;padding:10px 0;}
+.section-title span {font-size:12px;font-weight:400;color:var(--muted);margin-left:12px;}
+.section-title:before {content:' ';display:inline-block;width:6px;height:6px;background:var(--mint);border-radius:50%;margin-right:10px;vertical-align:2px;}
+.photo-wrap {position:relative;overflow:hidden;border-radius:12px;}
+.hero-photo {width:100%;height:430px;object-fit:cover;display:block;border-radius:12px;background:#1c2529;}
+.card-photo {width:100%;height:190px;object-fit:cover;display:block;background:#1c2529;}
+.neighbor-photo {width:100%;height:120px;object-fit:cover;display:block;border-radius:9px;}
+.thumb-photo {width:100%;height:68px;object-fit:cover;display:block;border-radius:6px;}
+.photo-placeholder {display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;border:1px dashed var(--line);}
+.price-badge {position:absolute;left:12px;top:12px;display:inline-block;padding:7px 10px;border-radius:7px;background:#183f33ed;color:#b5f5d6;font-size:11px;font-weight:650;}
+.price-badge.negative {background:#502b2bed;color:#ffd3cc;}
+.price-badge.neutral {background:#25343bed;color:#dce8ed;}
+.price {font-size:31px;letter-spacing:-1px;font-weight:750;margin:0 0 7px;line-height:1.25;}
+.listing-title {font-size:17px;font-weight:650;margin:0 0 8px;}
+.meta {color:var(--muted);font-size:12px;line-height:1.6;margin:5px 0;}
+.estimate {background:#183f3366;border:1px solid #91e8c226;border-radius:9px;color:var(--mint);padding:13px;font-size:14px;font-weight:600;}
+.st-key-listing_details {background:#1c2529;border:1px solid var(--line);border-radius:12px;padding:20px;margin-top:10px;}
+.st-key-previous_listing,.st-key-next_listing {padding-top:110px;}
+.neighbor-price {font-size:14px;font-weight:650;margin-top:8px;}
+.renovation {font-size:12px;color:var(--muted);margin-top:8px;}
+.renovation.good {color:#a2ddc0;}
+.renovation.bad {color:#f2b6aa;}
+.card-price {font-size:23px;font-weight:750;letter-spacing:-.6px;margin:9px 0 6px;}
+.card-title {font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:5px 0;}
+.card-score {font-size:11px;color:var(--muted);margin:10px 0;}
+.card-score b {color:var(--mint)}
+.st-key-results_header {border-top:1px solid var(--line);padding-top:24px;margin-top:24px;}
+.catalog-title {font-size:27px;font-weight:700;letter-spacing:-.7px;margin:8px 0;}
+.catalog-title span {font-size:13px;color:var(--muted);font-weight:400;letter-spacing:0;margin-left:12px;}
+[class*="st-key-flat_"] {background:#1c2529;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px;transition:border-color .2s;}
+[class*="st-key-flat_"]:hover {border-color:#729c8b;}
+[class*="st-key-flat_selected_"] {border-color:var(--mint);box-shadow:0 0 0 1px var(--mint);}
+.selected-note {color:var(--mint);font-size:11px;}
+.thumb-label {font-size:10px;color:var(--muted);}
+.footer {border-top:1px solid var(--line);margin-top:30px;padding:24px 0;font-size:11px;color:var(--muted);line-height:1.8;}
+@media(max-width:900px){.hero-photo{height:330px}.neighbor-photo{height:90px}.price{font-size:26px}.card-price{font-size:20px}}
+@media(max-width:640px){.intro{padding:15px 0}.intro p{font-size:12px}.hero-photo{height:275px}.card-photo{height:230px}.st-key-previous_listing,.st-key-next_listing{padding-top:0}.neighbor-photo,.neighbor-price{display:none}.st-key-search_panel{padding:12px}.price{font-size:27px}.catalog-title span{display:block;margin:5px 0}.thumb-photo{height:80px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Streamlit adds image fit rules; keep apartment photographs edge-to-edge. */
+img.hero-photo, img.card-photo, img.neighbor-photo, img.thumb-photo {object-fit:cover!important;}
+button[kind="primary"], a[kind="primary"], button[kind="primary"] p, a[kind="primary"] p {color:#10372b!important;}
